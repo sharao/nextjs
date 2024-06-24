@@ -6,28 +6,35 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --button-background: 17, 101, 152;
+  --button-color: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 50, 50, 50;
+    --button-background: 50, 50, 50;
+    --button-color: 200, 200, 200;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)) no-repeat;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica;
 }
