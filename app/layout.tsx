@@ -29,6 +29,9 @@ export default function RootLayout({
               <li>
                 <Link href="/components/todo">Todo</Link>
               </li>
+              <li>
+                <Link href="/components/post">Posts</Link>
+              </li>
             </ul>
           </nav>
         </header>
